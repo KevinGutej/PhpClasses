@@ -56,3 +56,20 @@ class Moderator extends User
 class Guest extends User
 {
 }
+
+
+function printClass()
+{
+    $guest2 = new Moderator(2, 'Katy');
+    if ($guest2 instanceof Guest) {
+        echo "Katy is a guest.";
+    }
+}
+
+printClass();
+
+$guest = new Guest(1, 'Bob');
+$moderator = new Moderator(2, 'John');
+$admin = new Admin(3, 'Kevin');
+// Testing the methods of each user type.  Note that only admin and moderators can make 
+$admin->closePage();
