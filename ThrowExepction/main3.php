@@ -23,3 +23,36 @@ class User
         echo $this->firstName . " made a change.";
     }
 }
+
+class Admin extends User
+{
+
+    public function editPage()
+    {
+        echo "Editing page.";
+        $this->whoMadeChange();
+        echo PHP_EOL;
+    }
+
+    public function closePage()
+    {
+        echo "Closing Page.";
+        $this->whoMadeChange();
+        echo PHP_EOL;
+    }
+}
+
+class Moderator extends User
+{
+
+    public function editPage()
+    {
+        echo "Editing page.";
+        $this->whoMadeChange();
+        echo PHP_EOL;
+    }
+}
+
+class Guest extends User
+{
+}
