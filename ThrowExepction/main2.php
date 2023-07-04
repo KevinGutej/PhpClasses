@@ -22,3 +22,12 @@ class Plant
         }
     }
 }
+
+
+$height = 1.5;
+
+$blueberries = new Plant(1, "green", "blue");
+$rose = new Plant(2, "green", "red");
+$blueberries->printIfHigherThan($height);
+echo PHP_EOL;
+$rose->printIfHigherThan($height);
